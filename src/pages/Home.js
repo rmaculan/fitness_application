@@ -6,6 +6,7 @@ import SearchExercises from "../components/SearchExercises";
 import Exercises from "../components/Exercises";
 import BMICalculator from "../components/BMICalculator";
 
+
 const Home = () => {
   const [bodyPart, setBodyPart] = useState("all");
   const [exercises, setExercises] = useState([]);
@@ -46,6 +47,7 @@ const Home = () => {
       </Typography>
       </Stack>
       <BMICalculator />
+      
       <Typography
         justifyContent="center"
         sx={{
@@ -74,6 +76,7 @@ const Home = () => {
         bodyPart={bodyPart}
         
       />
+      
       
     </Box>
   );
