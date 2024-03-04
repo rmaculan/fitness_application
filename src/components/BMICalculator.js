@@ -54,22 +54,6 @@ const BMICalculator = () => {
         Knowing your BMI is a good indicator of whether you are at a healthy weight.
         Use this calculator to check.
     </Typography>
-    <Typography
-        sx={{
-            fontSize: { lg: "16px", xs: "18px" },
-            color: "#3A1212",
-            marginTop: "40px",
-            marginLeft: "50px",
-            marginRight: "50px",
-        }}
-        fontWeight={400}     
-    >
-        If you are overweight or obese, you have a higher risk of developing serious health problems,
-        including heart disease, high blood pressure, type 2 diabetes, gallstones, breathing problems,
-        and certain cancers. That is why maintaining a healthy weight is so important: It helps you lower
-        your risk for developing these problems, helps you feel good about yourself, and gives you more
-        energy to enjoy life.
-    </Typography>
       <Stack
         direction="column"
         justifyContent="center"
