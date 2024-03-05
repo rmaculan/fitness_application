@@ -61,8 +61,8 @@ const DailyCalorieCalculator = () => {
         }}
         fontWeight={700}
       >
-        Now Let's Calculate Your Total Daily Energy
-            Expenditure (TDEE).
+        Now Let's Calculate Your Basal Metabolic Rate (BMR) and Total Daily
+        Energy Expenditure (TDEE).
       </Typography>
       <Typography
         justifyContent="center"
@@ -75,8 +75,23 @@ const DailyCalorieCalculator = () => {
         }}
         fontWeight={700}
       >
-        This tool will help you figure out how many calories you need to eat
-        daily based on your activity level.
+        This tool will help you figure out the amount of energy expended while
+        at rest in various environments using a BMR calculator. In order to
+        determine your TDEE, you will need to know your BMR.
+      </Typography>
+      <Typography
+        justifyContent="center"
+        sx={{
+          fontSize: { lg: "24px", xs: "18px" },
+          color: "#3A1212",
+          marginTop: "40px",
+          marginLeft: "60px",
+          marginRight: "50px",
+        }}
+        fontWeight={700}
+      >
+        Having an understanding of your TDEE is important because it helps you
+        to plan your diet and exercise routine to achieve your fitness goals.
       </Typography>
       <Stack
         direction="column"
@@ -114,9 +129,26 @@ const DailyCalorieCalculator = () => {
             }}
             fontWeight={400}
           >
-            Fill in the following fields to calculate your TDEE. That means, how many calories you need to eat
-            daily to maintain your current weight. If you want to lose weight,
-            you should eat less than this amount.
+            Fill in the following fields to calculate your TDEE using metric
+            units. If are using imperial units, you can convert them to metric
+            units using the following conversions:
+            <Typography
+              sx={{
+                fontSize: { lg: "18px", xs: "14px" },
+                color: "#3A1212",
+                marginTop: "20px",
+                marginLeft: "40px",
+                marginRight: "40px",
+                marginBottom: "20px",
+              }}
+              fontWeight={400}
+            >
+              1 pound = 0.453592 kilograms
+              <br />1 inch = 0.0254 meters
+            </Typography>
+          </Typography>
+          <Typography>
+            If you want to lose weight, you should eat less than this amount.
           </Typography>
           <label>Age:</label>
           <input
@@ -152,10 +184,16 @@ const DailyCalorieCalculator = () => {
           >
             <option value="">Select...</option>
             <option value="sedentary">Sedentary: No Exercise</option>
-            <option value="lightly active">Lightly Active: 1 - 2 times a week</option>
-            <option value="moderately active">Moderately Active: 3 - 4 times a week</option>
+            <option value="lightly active">
+              Lightly Active: 1 - 2 times a week
+            </option>
+            <option value="moderately active">
+              Moderately Active: 3 - 4 times a week
+            </option>
             <option value="very active">Very Active: 4 - 5 times a week</option>
-            <option value="super active">Super Active or Physical Job: 6 - 7 times a week</option>
+            <option value="super active">
+              Super Active or Physical Job: 6 - 7 times a week
+            </option>
           </select>
           <button
             style={{
@@ -191,12 +229,15 @@ const DailyCalorieCalculator = () => {
               sx={{
                 fontSize: { lg: "24px", xs: "18px" },
                 color: "#3A1212",
-                
               }}
               fontWeight={700}
               textTransform="capitalize"
             >
-              Your TDEE is {dailyCalories} calories a day.
+              Your BMR: {BMR}
+            </Typography>
+            <Typography>
+              Your TDEE is {dailyCalories} calories a day. For the selected
+              activity level
             </Typography>
           </Stack>
         )}
